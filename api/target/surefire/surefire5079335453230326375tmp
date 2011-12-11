@@ -1,0 +1,5 @@
+#surefire
+#Sun Dec 11 13:26:46 EST 2011
+user.dir=/home/harsha/Downloads/populatingactivelists/api
+localRepository=/home/harsha/.m2/repository
+basedir=/home/harsha/Downloads/populatingactivelists/api

@@ -29,10 +29,9 @@
 	 </extension>    
   	  	
   	<!-- Maps hibernate file's , if present -->   	
-   	<mappingFiles>
-		populatingactivelists.hbm.xml
-
-	</mappingFiles>
+   	<!-- <mappingFiles>
+		${omodHbmConfig}
+	</mappingFiles> -->
 
 	
 	<!-- Internationalization -->

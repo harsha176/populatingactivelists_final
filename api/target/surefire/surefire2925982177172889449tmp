@@ -1,0 +1,5 @@
+#surefire
+#Wed Nov 30 20:52:02 EST 2011
+user.dir=C\:\\Users\\ravi\\openmrs-workspace\\populatingactivelists\\api
+localRepository=C\:\\Users\\ravi\\.m2\\repository
+basedir=C\:\\Users\\ravi\\openmrs-workspace\\populatingactivelists\\api

@@ -41,10 +41,8 @@ public class AllergiesMigrationController extends ActiveListMigrationProcessor
 
 	@RequestMapping(value = "/module/obsconverter/allergiesmigration", method = RequestMethod.POST)
 	public void afterPageSubmission(
-			ModelMap map,
 			@RequestParam("allergiesAddedConceptID") Integer allergiesAddedConcept,
-			@RequestParam("allergiesRemovedConceptID") Integer allergiesRemovedConcept,
-			Migratable updatable, HttpSession httpSession) {
+			@RequestParam("allergiesRemovedConceptID") Integer allergiesRemovedConcept, HttpSession httpSession) {
 
 		int count = super.afterPageSubmission(allergiesAddedConcept,
 				allergiesRemovedConcept, this);
@@ -59,11 +57,14 @@ public class AllergiesMigrationController extends ActiveListMigrationProcessor
 	//@Override
 	public boolean isActiveListItemAddable(Obs current_obs,
 			ActiveListItem lastEncountered) {
+		// to be commented
+		assert current_obs != null : "Current obeservation is null";
 		if (lastEncountered == null) {
 			return true;
 		} else if (lastEncountered instanceof Allergy) {
 			Allergy lastProblemEnc = (Allergy) lastEncountered;
-			return (lastProblemEnc.getEndDate().before(current_obs
+			//assert lastProblemEnc.getEndDate() != null : "End date is null";
+			return (lastProblemEnc.getDateCreated().before(current_obs
 					.getDateCreated()));
 		} else
 			return false;

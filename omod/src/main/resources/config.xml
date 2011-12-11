@@ -29,9 +29,9 @@
 	 </extension>    
   	  	
   	<!-- Maps hibernate file's , if present -->   	
-   	<mappingFiles>
+   	<!-- <mappingFiles>
 		${omodHbmConfig}
-	</mappingFiles>
+	</mappingFiles> -->
 
 	
 	<!-- Internationalization -->

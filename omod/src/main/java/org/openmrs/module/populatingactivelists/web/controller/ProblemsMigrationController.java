@@ -50,7 +50,6 @@ public class ProblemsMigrationController extends ActiveListMigrationProcessor
 
 	@RequestMapping(value = "/module/obsconverter/problemsmigration", method = RequestMethod.POST)
 	public void afterPageSubmission(
-			ModelMap map,
 			@RequestParam("problemAddedConcept") Integer problemAddedConceptId,
 			@RequestParam("problemRemovedConcept") Integer problemResolvedConceptId,
 			HttpSession httpSession) {
@@ -120,6 +119,8 @@ public class ProblemsMigrationController extends ActiveListMigrationProcessor
 		}
 		return null;
 	}
+	
+	
 
 	//@Override
 	public ActiveListType getActiveListType() {
